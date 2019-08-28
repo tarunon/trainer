@@ -21,7 +21,7 @@ module Trainer
       # They may contain white spaces
       clean_xml = []
       xml.each_line do |row|
-        clean_xml << row.delete("\n") if row.strip.to_s.length > 0
+        clean_xml << row if row.strip.to_s.length > 0
       end
       return clean_xml.join("\n")
     end
